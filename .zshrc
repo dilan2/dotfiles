@@ -87,6 +87,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
  alias tms="tmux list-sessions"
+ alias tmss="tmux new -s "
+ alias tmsk="tmux kill-session -t "
+ alias tmsa="tmux a -t "
  alias ll="ls -la"
  alias gs="git status"
  alias ga="git add ."
@@ -101,5 +104,8 @@ source $ZSH/oh-my-zsh.sh
  alias gfff="git flow feature finish"
  alias gpod="git push origin develop"
  alias gpom="git push origin master"
+ alias dockup="docker-compose up -d nginx mysql"
+ alias vimedit="vim ~/.vimrc"
+ alias zshedit="vim ~/.zshrc"
 
 
