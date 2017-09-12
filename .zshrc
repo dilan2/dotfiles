@@ -107,5 +107,6 @@ source $ZSH/oh-my-zsh.sh
  alias dockup="docker-compose up -d nginx mysql"
  alias vimedit="vim ~/.vimrc"
  alias zshedit="vim ~/.zshrc"
+ alias art="php artisan "
 
 
