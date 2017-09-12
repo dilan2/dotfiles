@@ -122,6 +122,7 @@ syntax on
 set mouse=a
 set complete=.,w,b,u
 set foldmethod=manual
+set backspace=indent,eol,start
 
 
 "For plugins:
