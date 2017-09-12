@@ -1,4 +1,4 @@
-filetype off                  " required
+filetype on                  " required
 
 "=======VUNDLE PLUGINS===========
 
@@ -26,6 +26,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'tpope/vim-surround'
 
+Plugin 'Valloric/YouCompleteMe'                                                                 
 
 
 Plugin 'StanAngeloff/php.vim'
@@ -58,7 +59,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle'  }                                       
 Plug 'alvan/vim-closetag'
-Plug 'Valloric/YouCompleteMe'                                                                 
+"Plug 'Valloric/YouCompleteMe'                                                                 
 Plug 'ctrlpvim/ctrlp.vim'
   
 Plug 'jelera/vim-javascript-syntax'                                                           
@@ -147,6 +148,7 @@ map <Leader>a :set mouse=a<CR>o
 nmap <c-R> :CtrlPBufTag<cr>
 nmap <c-I> :CtrlPMRUFiles<cr>
 nmap <c-E> :CtrlPBuffer<cr>
+nmap <c-X> :marks<cr>
 
 
 
@@ -180,12 +182,13 @@ let g:ctrlp_custom_ignore = 'node_modules\DS_Store\git\vendor'
 
 "===================SnipMate settings==================
 "let g:snips_trigger_key = '<C-m'
-imap <C-J> <Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
+imap <C-f> <Plug>snipMateNextOrTrigger
+smap <C-f> <Plug>snipMateNextOrTrigger
 
 "===================CTAGS settings==================
 
 nmap <Leader>f :tag<space>
+
 
 
 "=====================GREPLACE=================
