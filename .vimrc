@@ -121,6 +121,7 @@ syntax enable
 syntax on
 set mouse=a
 set complete=.,w,b,u
+set foldmethod=manual
 
 
 "For plugins:
@@ -152,6 +153,16 @@ nmap <c-I> :CtrlPMRUFiles<cr>
 nmap <c-E> :CtrlPBuffer<cr>
 nmap <c-X> :marks<cr>
 
+
+"======folding management
+inoremap <F9> <C-O>za
+nnoremap <F9> za
+onoremap <F9> <C-C>za
+vnoremap <F9> zf
+
+
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
 
 
 vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr>
