@@ -1,4 +1,4 @@
-filetype on                  " required
+filetype off                  " required
 
 "=======VUNDLE PLUGINS===========
 
@@ -142,7 +142,7 @@ map <Leader>m :bp<CR>
 map <Leader>p :set paste<CR>
 map <Leader>[ :set nopaste<CR>
 map <Leader>q :set mouse-=a<CR>
-map <Leader>a :set mouse=a<CR>o
+map <Leader>a :set mouse=a<CR>
 
 
 nmap <c-R> :CtrlPBufTag<cr>
@@ -155,18 +155,14 @@ nmap <c-X> :marks<cr>
 vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr>
 
 
-"map <Leader>gs :vim_git#status<CR>
+"===========LARAVEL==============
+nmap <Leader>lr :e app/Http/web.php<cr>
+nmap <Leader>lm :!php artisan make:
+nmap <Leader><Leader>c :CtrlP<cr>app/Http/Controllers/
+nmap <Leader><Leader>m :CtrlP<cr>app/
+nmap <Leader><Leader>v :CtrlP<cr>resources/views/
 
-"map <Leader>gl :vim_git#log<CR>
-"map <Leader>gb :vim_git#branchList<CR>
-"map <Leader>gt :vim_git#tagList<CR>
-"map <Leader>ga :vim_git#addCurrent<CR>
-"map <Leader>gA :vim_git#addAll<CR>
-"map <Leader>gc :vim_git#commit<CR>
-"map <Leader>gC :vim_git#commitAll<CR>
-"map <Leader>go :vim_git#pushCurrent<CR>
-"map <Leader>gi :vim_git#pullCurrent<CR>
-"map <Leader>gr :vim_git#remoteList<CR>
+
 
 
 "POWERLINE
