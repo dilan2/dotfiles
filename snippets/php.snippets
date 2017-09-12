@@ -24,3 +24,36 @@ snippet dm
 	Debugbar::addMessage(${1}, ${2});
 snippet dw
 	Debugbar::warning(${1});
+snippet forc
+	for($i = 0; $i < count(${1}); $i++) {
+		${2}
+	}
+snippet for
+	for($i = 0; $i < ${1}; $i++) {
+		${2}
+	}
+snippet foreach
+	foreach(${1} as ${2}) {
+		${3}
+	}
+snippet if
+	if(${1}) {
+		${2}
+	}
+snippet belto
+	public function ${1}() {
+		return $this->belongsTo${2}
+	}
+snippet haso
+	public function ${1}() {
+		return $this->hasOne${2}
+	}
+snippet hasm
+	public function ${1}() {
+		return $this->hasMany${2}
+	}
+snippet beltom
+	public function ${1}() {
+		return $this->belongsToMany${2}
+	}
+
