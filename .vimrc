@@ -28,13 +28,15 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'tpope/vim-surround'
 Plugin 'aserebryakov/vim-todo-lists'
 
-"Plugin 'Valloric/YouCompleteMe'                                                                 
+Plugin 'Valloric/YouCompleteMe'                                                                 
 
 
 Plugin 'StanAngeloff/php.vim'
 Plugin 'arnaud-lb/vim-php-namespace'
 
 Plugin 'ervandew/supertab'
+"Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'shawncplus/phpcomplete.vim'
 
 " All of your Plugins must be added before the following line
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -176,6 +178,7 @@ nmap <Leader>lm :!php artisan make:
 nmap <Leader><Leader>c :CtrlP<cr>app/Http/Controllers/
 nmap <Leader><Leader>m :CtrlP<cr>app/
 nmap <Leader><Leader>v :CtrlP<cr>resources/views/
+nmap <Leader>tag :!php ./phpctags --recurse --memory=-1<cr>
 
 "========TODOLIST=========
 nmap <Leader>tna :VimTodoListsCreateNewItemAbove<cr>
