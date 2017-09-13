@@ -26,8 +26,9 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'tpope/vim-surround'
+Plugin 'aserebryakov/vim-todo-lists'
 
-Plugin 'Valloric/YouCompleteMe'                                                                 
+"Plugin 'Valloric/YouCompleteMe'                                                                 
 
 
 Plugin 'StanAngeloff/php.vim'
@@ -176,6 +177,13 @@ nmap <Leader><Leader>c :CtrlP<cr>app/Http/Controllers/
 nmap <Leader><Leader>m :CtrlP<cr>app/
 nmap <Leader><Leader>v :CtrlP<cr>resources/views/
 
+"========TODOLIST=========
+nmap <Leader>tna :VimTodoListsCreateNewItemAbove<cr>
+nmap <Leader>tnb :VimTodoListsCreateNewItemBelow<cr>
+nmap <Leader>tgn :VimTodoListsGoToNextItem<cr>
+nmap <Leader>tgp :VimTodoListsGoToPreviousItem<cr>
+nmap <Leader>tc :VimTodoListsCreateNewItem<cr>
+nmap <Leader>tt :VimTodoListsToggleItem<cr>
 
 
 
@@ -199,7 +207,11 @@ smap <C-f> <Plug>snipMateNextOrTrigger
 
 nmap <Leader>f :tag<space>
 
+"=========WouCompleteMe========
 
+
+let g:ycm_min_num_of_chars_for_completion = 2
+let g:ycm_collect_identifiers_from_tags_files = 0
 
 "=====================GREPLACE=================
 
@@ -227,6 +239,7 @@ autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 
 
 " let g:ycm_auto_trigger = 0
+
 
 
 "========MACRO=========

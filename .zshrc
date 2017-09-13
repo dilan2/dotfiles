@@ -109,5 +109,6 @@ source $ZSH/oh-my-zsh.sh
  alias zshedit="vim ~/.zshrc"
  alias art="php artisan "
  alias phpsnip="vim ~/.vim/snippets/php.snippets"
+ alias dotedit="cd ~/Code/dotfiles"
 
 
