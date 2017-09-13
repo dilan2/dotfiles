@@ -108,5 +108,6 @@ source $ZSH/oh-my-zsh.sh
  alias vimedit="vim ~/.vimrc"
  alias zshedit="vim ~/.zshrc"
  alias art="php artisan "
+ alias phpsnip="vim ~/.vim/snippets/php.snippets"
 
 
