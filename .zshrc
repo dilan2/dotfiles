@@ -110,5 +110,11 @@ source $ZSH/oh-my-zsh.sh
  alias art="php artisan "
  alias phpsnip="vim ~/.vim/snippets/php.snippets"
  alias dotedit="cd ~/Code/dotfiles"
+ # docker aliases
+ alias dockup="docker-compose up -d "
+ alias dockupnm="docker-compose up -d nginx mysql"
+ alias dockstop="docker-compose stop"
+ alias dps="docker ps"
+ alias dexec="docker exec -ti "
 
 
