@@ -203,8 +203,8 @@ let g:ctrlp_custom_ignore = 'node_modules\DS_Store\git\vendor'
 
 "===================SnipMate settings==================
 "let g:snips_trigger_key = '<C-m'
-imap <C-f> <Plug>snipMateNextOrTrigger
-smap <C-f> <Plug>snipMateNextOrTrigger
+imap <C-j> <Plug>snipMateNextOrTrigger
+smap <C-j> <Plug>snipMateNextOrTrigger
 
 "===================CTAGS settings==================
 
