@@ -1,4 +1,14 @@
 filetype off                  " required
+" Pathogen load - to make python work correct
+"mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+"curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+"cd ~/.vim
+" mkdir -p bundle && cd bundle
+" git clone https://github.com/python-mode/python-mode.git
+call pathogen#infect()
+call pathogen#helptags()
+
+filetype plugin indent on
 
 "=======VUNDLE PLUGINS===========
 "to install Vundle git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -30,7 +40,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'aserebryakov/vim-todo-lists'
 
 Plugin 'Valloric/YouCompleteMe'                                                                 
+Plugin 'jmcantrell/vim-virtualenv'                                                                 
 Plugin 'tstelzer/welpe.vim'
+Plugin 'davidhalter/jedi-vim'
 
 
 Plugin 'StanAngeloff/php.vim'
@@ -312,7 +324,7 @@ let @l="c{{'pla|_"
 
 
 
-
+let g:virtualenv_directory = '/Users/sergejglebko/Code/docker/virtualenv'
 
 
 
