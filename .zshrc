@@ -4,12 +4,14 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/sergejglebko/.oh-my-zsh
+export HOMEBREW_GITHUB_API_TOKEN="dcfcc3e475cc823205e76a25281a78a491f60971"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="cobalt2"
+#ZSH_THEME="linuxonly"
 ZSH_THEME="agnoster"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -31,7 +33,7 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -116,5 +118,6 @@ source $ZSH/oh-my-zsh.sh
  alias dockstop="docker-compose stop"
  alias dps="docker ps"
  alias dexec="docker exec -ti "
+ alias mvm="mvim -v"
 
 

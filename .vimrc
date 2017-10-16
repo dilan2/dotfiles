@@ -17,6 +17,7 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'itchyny/lightline.vim'
 "Plugin 'flazz/vim-colorschemes'
 
+Plugin 'posva/vim-vue'
 
 "Plugin 'vim-airline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'
@@ -29,6 +30,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'aserebryakov/vim-todo-lists'
 
 Plugin 'Valloric/YouCompleteMe'                                                                 
+Plugin 'tstelzer/welpe.vim'
 
 
 Plugin 'StanAngeloff/php.vim'
@@ -91,7 +93,9 @@ let g:mapleader=','
 
 "My favourite colourthemes:
 "colorscheme gruvbox
-colorscheme atom-dark-256
+"colorscheme atom-dark-256
+
+colorscheme welpe
 "colorscheme nord
 "This was previous color theme:
 "colorscheme Base2Tone_eveningDark
@@ -126,6 +130,9 @@ set mouse=a
 set complete=.,w,b,u
 set foldmethod=manual
 set backspace=indent,eol,start
+set guioptions=
+"set gfn=Monaco:h12
+set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 
 
 "For plugins:
@@ -152,7 +159,7 @@ map <Leader>q :set mouse-=a<CR>
 map <Leader>a :set mouse=a<CR>
 
 
-nmap <c-R> :CtrlPBufTag<cr>
+nmap <c-U> :CtrlPBufTag<cr>
 nmap <c-I> :CtrlPMRUFiles<cr>
 nmap <c-E> :CtrlPBuffer<cr>
 nmap <c-X> :marks<cr>
@@ -173,6 +180,8 @@ vmap <Leader>su ! awk '{ print length(), $0 \| "sort -n \| cut -d\\  -f2-" }'<cr
 
 
 "===========LARAVEL==============
+"curl -Ss http://vim-php.com/phpctags/install/phpctags.phar > phpctags чтоб
+"phptags работали
 nmap <Leader>lr :e app/Http/web.php<cr>
 nmap <Leader>lm :!php artisan make:
 nmap <Leader><Leader>c :CtrlP<cr>app/Http/Controllers/
@@ -213,14 +222,44 @@ nmap <Leader>f :tag<space>
 "=========WouCompleteMe========
 
 
-let g:ycm_min_num_of_chars_for_completion = 2
-let g:ycm_collect_identifiers_from_tags_files = 0
+let g:ycm_min_num_of_chars_for_completion = 1
+"let g:ycm_collect_identifiers_from_tags_files = 0
 
 "=====================GREPLACE=================
 
 set grepprg=ag
 
 let g:grep_cmd_opts = '--line-numbers --noheading'
+
+"=====================YouCompleteMe=================
+let g:ycm_enable_diagnostic_signs = 1
+let g:ycm_enable_diagnostic_highlighting = 1
+let g:ycm_echo_current_diagnostic = 1
+let g:ycm_open_loclist_on_ycm_diags = 1
+let g:ycm_allow_changing_updatetime = 1
+
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_disable_for_files_larger_than_kb = 10000
+
+
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+
+
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
 
 
 
@@ -254,6 +293,10 @@ autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 " ino <tab> <c-r>=snipMate#TriggerSnippet()<cr> 
 
 let @w="yiw/}O$this->pa = $pa;?constructOprotected $pa;/construct/\""
+
+let @l="c{{'pla|_"
+
+
 " let g:snipMate = {'get_snippets': {'faked_function_reference':
 " 			\'snipMate#GetSnippets'}, 'snippet_dirs':['~/.vim/snippets'],
 " 			\ 'no_match_completion_feedkeys_chars':
