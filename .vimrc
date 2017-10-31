@@ -19,6 +19,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'joonty/vdebug'
 
 "Plugin 'tpope/vim-fugitive'
 "Plugin 'dikiaap/minimalist'
@@ -28,9 +29,10 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'flazz/vim-colorschemes'
 
 Plugin 'posva/vim-vue'
+Plugin 'edkolev/tmuxline.vim'
 
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'rking/ag.vim'
 Plugin 'skwp/greplace.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -119,9 +121,11 @@ colorscheme welpe
 "colorscheme dracula
 "set termguicolors
 "colorscheme deep-space
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#tab_nr_type = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#tab_nr_type = 0
+let g:airline#extensions#tabline#buffer_nr_show = 0
+"let g:airline_theme='wombat'
+let g:airline_theme='jellybeans'
 
 
 
@@ -328,4 +332,24 @@ let g:virtualenv_directory = '/Users/sergejglebko/Code/docker/virtualenv'
 
 
 
+let g:airline#extensions#tmuxline#enabled = 1
+let g:tmuxline_theme = {
+    \   'a'    : [ 236, 103 ],
+    \   'b'    : [ 253, 239 ],
+    \   'c'    : [ 244, 236 ],
+    \   'x'    : [ 244, 236 ],
+    \   'y'    : [ 253, 239 ],
+    \   'z'    : [ 236, 103 ],
+    \   'win'  : [ 103, 236 ],
+    \   'cwin' : [ 236, 103 ],
+    \   'bg'   : [ 244, 36 ],
+    \ }
+
+
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'win'  : ['#I', '#W'],
+      \'cwin' : ['#I', '#W', '#F'],
+      \'y'    : ['%R']}
+let g:tmuxline_theme = 'zenburn'
 
